@@ -5,7 +5,7 @@
     <div class="col-md-6 col-md-offset-3">
         <form action="/bikes/<%=editPost._id%>?_method=PUT" method="POST">
           <input class="form-control" type="text" name="newPost[title]" value="<%= editPost.title %>">
-          <input class="form-control" type="text" name="newPost[headimg]" value="<%=editPost.headimg%>">">
+          <input class="form-control" type="text" name="newPost[headimg]" value="<%=editPost.headimg%>">
           <input class="form-control" type="text" name="newPost[image]" value="<%= editPost.image %> ">
           <input class="form-control" type="text" name="newPost[text]" value=" <%= editPost.text %>">
           <button class="form-control btn btn-success">Submit</button>
