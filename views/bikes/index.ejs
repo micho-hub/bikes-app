@@ -1,0 +1,47 @@
+<% include ../partials/header%>
+
+<div class=" key">
+  <% allPosts.forEach(function(posts){ %>
+      <div class="col-md-3 col-sm-6">
+          <a  href="/bikes/<%=posts._id%>">
+            <div class="item color">
+                <div class="submitetBy">
+                  <em>Submitted By <%= posts.author.username %></em>
+                </div>
+                  <div class="title">
+                    <%=posts.title %>
+                  </div>
+                  <img class="imgH"src="<%=posts.image%>">
+                  <div class="Text">
+                    <%= posts.text.substring(0,124) %>...
+                  </div>
+            </div>
+          </a>
+     </div>
+  <% }) %>
+</div>
+<div class="heightPagination">
+  <% if (pages > 0) { %>
+     <% var i = (Number(current) >= 1 ? Number(current) -1 : 1) %>
+     <% if (i >= 1) { %>
+         <a href="<%= i !== 0 ? "/" : "/bikes/all/" + i %>">
+         </a>
+     <% } %>
+     <% for (; i <= (Number(current) + 1) && i <= pages; i++) { %>
+         <% if (i == current) { %>
+          <div class="currentPage">
+            current page
+            <%= i %>
+          </div>
+         <% } else { %>
+           <a href="<%= i !== 0 ? "/bikes/all/" + i : "/"%>">
+              <div class="pagination">
+                <%= i !== 0 ? "Page " + i : "Home"  %>
+              </div>
+            </a>
+         <% } %>
+     <% } %>
+  <% } %>
+</div>
+
+<% include ../partials/footer%>

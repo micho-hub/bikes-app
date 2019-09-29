@@ -1,0 +1,240 @@
+.bud{
+  color:red;
+}
+
+.expIncDiv {
+  margin-top: 70px;
+}
+.total{
+  font-family: 'Rajdhani', sans-serif;
+  margin-top:60px;
+  text-align: center;
+  color: #4CAF50;
+  font-size: 75px;
+  width: 700;
+}
+.text-right{
+  text-align: center;
+}
+.budButton{
+
+border: 2px solid rgb(32, 179, 88);
+color:rgb(32, 179, 88);
+padding: 15px 72px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+margin-top: 40px;
+
+  font-family: 'Julius Sans One', sans-serif;
+
+}
+.budButton:hover{
+
+
+  border: 2px solid gray;
+  color: gray;
+  padding: 15px 72px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+    font-family: 'Julius Sans One', sans-serif;
+
+
+}
+.selecMenu{
+  margin-top: 60px;
+  text-align: center;
+}
+.selecMenuButton{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 60px;
+  width: 100%;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+select{
+    text-align-last:center;
+    padding-right: 29px;
+    font-size: 32px;
+}
+option{
+    text-align-last:center;
+    padding-left: 29px;
+    font-size: 24px;
+}
+
+.createTitle{
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  color:  white;
+  margin-top: 60px;
+}
+
+
+
+.totalColor{
+  color: white;
+}
+.allItemsTable{
+  margin-top: 100px;
+
+}
+
+.oneItem{
+  font-family: 'Julius Sans One', sans-serif;
+
+}
+
+
+
+.rightExp{
+  font-size: 20px;
+
+}
+.itemDec{
+  text-transform: uppercase;
+}
+.dateDec{
+  font-family: 'Abel', sans-serif;
+  color:gray;
+}
+.titleH5{
+
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+  text-transform: uppercase;
+  font-size: 35px;
+  border-bottom:2px solid rgb(33, 163, 87);
+  color:rgb(33, 163, 87);
+  width: 100%;
+  float:left;
+
+
+}
+
+.titleH52{
+
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+  text-transform: uppercase;
+  font-size: 35px;
+
+  border-bottom:2px solid red;
+  color:red;
+
+}
+
+.forCover{
+background-image: linear-gradient(to right, rgba(76, 77, 76,0.2), rgba(47, 52, 77,1));
+height: 365px;
+}
+
+.itemforcover{
+background-image: url("/parts.jpg");
+height: 365px;
+}
+.dolarColor{
+  color: rgb(32, 179, 88);
+}
+.formButtonItem{
+  background-color: white;
+  border:1px solid rgb(240, 43, 43, 0.2);
+  color: red;
+  padding: 3px 11px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 0;
+  width: 65px;
+  opacity: 0.5;
+
+}
+.formButtonItem:hover{
+  background-color: red;
+    border:1px solid rgb(240, 43, 43, 0.2);
+  color: white;
+  padding: 3px 11px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 0;
+  width: 65px;
+  transition-delay: 0.1s;
+  transition-duration: 0.5s
+}
+.itemButtStyle{
+  text-align: center;
+}
+.icofont-coins{
+  font-size: 40px;
+ color: white;
+}
+.iconBud{
+  margin-top: 62px;
+  text-align: center;
+}
+.num{
+
+
+  font-family: 'Rajdhani', sans-serif;
+  color: rgb(32, 179, 88);
+  font-size: 65px;
+
+}
+.numOne{
+  text-align: center;
+  color:white;
+  font-size: 51px;
+}
+
+.minus{
+  color:red;
+  text-align: center;
+}
+.numMinus{
+  text-align: center;
+}
+.ziro{
+  text-align: center;
+  font-size: 59px;
+  color: white
+}
+.totalDesc{
+
+  text-align: center;
+  font-size: 18px;
+  text-transform:uppercase;
+  color:white;
+  font-family: 'Saira', sans-serif;
+  margin-bottom: 70px;
+}

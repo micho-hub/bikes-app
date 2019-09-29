@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Your Cycling Story</title >
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheet/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Barlow:600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+  <body>
+    <div class="headerOverlay">
+
+      <div class="headPhoto">
+
+
+    <nav class="navbar navbar-default">
+      <div class="container head123">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/bikes/all/1">Bikes</a>
+
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/all">Budget</a></li>
+            <li><a href="/chat">Chat</a></li>
+            <li><a href="/bikes/new">New Post</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <% if(!currentUser){ %>
+              <li><a href="/login">Log in</a></li>
+              <li><a href="/register">Sign up</a></li>
+            <% }else{%>
+              <li><a href="#">Sign In As <%= currentUser.username %></a></li>
+              <li><a href="/logout">Log out</a><i class="far fa-trash-alt"></i></li>
+            <% }%>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+    <%  if(error && error.length>0) {%>
+          <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% }%>
+    </div>
+
+        </div>
+          </div>
+    <script type="text/javascript" src="/stylesheets/app.js"></script>
+    <script type="text/javascript" src="/stylesheets/appone.js"></script>
+    <!--<script src='components/bootstrap/dist/js/bootstrap.min.js'></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>

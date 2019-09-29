@@ -1,0 +1,61 @@
+<% include ../partials/footerShow %>
+<div class="headerimg">
+  <img class="imghead" src="<%= showPost.headimg %>" >
+</div>
+<%if(currentUser && showPost.author.id.equals(currentUser._id)){%>
+      <a class=" editheader " href="/bikes/<%=showPost._id%>/edit/photo"><strong>EDIT</strong></a>
+<% }%>
+  <h4 class="titleHead"><%= showPost.title %></h4>
+<div class="col-md-6">
+  <div class="imgStyle">
+      <img  src="<%=showPost.image %>">
+  </div>
+</div>
+<div class="col-md-6 fontShow">
+      <%= showPost.text %>
+        <em>Submitted By <%= showPost.author.username %></em>
+    <%if(currentUser && showPost.author.id.equals(currentUser._id)){%>
+    <a class="btn btn-xs btn-warning" href="/bikes/<%=showPost._id%>/edit">Edit</a>
+    <form class="button" action="/bikes/<%=showPost._id%>?_method=DELETE" method="POST">
+      <button class=" btn btn-xs btn-danger">Delete</button>
+    </form>
+    <% }%>
+</div>
+<div class="col-md-12">
+   <div class="commentsBackColor">
+     <div class="text-right">
+       <a class="btn btn-success btnCommentColor" href="/bikes/<%= showPost._id %>/comments/new">Add comment</a>
+     </div>
+     <% showPost.comments.forEach(function(comment){%>
+           <strong class="commentsName"><%= comment.author.username %></strong>
+           <span class="pull-right">
+             <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+               <a class="btn btn-xs btn-warning" href="/bikes/<%=showPost._id%>/comments/<%=comment._id%>/edit">edit</a>
+                 <form class="button" action="/bikes/<%=showPost._id%>/comments/<%=comment._id%>?_method=DELETE" method="post">
+                     <button class=" btn btn-xs btn-danger" name="button">delete</button>
+                 </form>
+             <% } %>
+           </span>
+           <p class="commentsText">
+               <%= comment.text%>
+           </p>
+     <% })%>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ../partials/footer %>

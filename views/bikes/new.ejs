@@ -1,0 +1,18 @@
+<% include ../partials/header%>
+<h1 class="indexH1">Creat your post</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form action="/bikes" method="POST" onsubmit="var text = document.getElementById('minle').value; if(text.length < 70) { alert('You post mast have more then 250 caracters!'); return false; } return true;">
+        <input class="form-control inputSty"type="text" name="title" placeholder="Title">
+        <input class="form-control inputSty" type="text" name="headimg" placeholder="Insert header photo">
+        <input class="form-control inputSty" type="text" name="image" placeholder="Image">
+        <div class="form-group">
+            <textarea class="form-control"  type="text" name="text" placeholder="Text" rows="5" cols="125" maxlength="310" required id="minle"></textarea>
+        </div>
+        <button class="form-control btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<% include ../partials/footer %>

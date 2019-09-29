@@ -1,0 +1,71 @@
+<% include ../partials/headerTotal%>
+
+<i class="fas fa-landmark"></i>
+<div class="itemButtStyle">
+  <a class="budButton" href="/budget">Create</a>
+</div>
+
+<div class="allItemsTable">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-6 borders1">
+        <h5 class="titleH52">Expenses</h5>
+        <div class="rightExp">
+
+          <% last.forEach(function(itemsAll){%>
+          <% if(itemsAll.expInc==="exp"){%>
+          <div class="oneItem">
+            <div class="col-md-5 col-sm-5 col-xs-5 ">
+              <span class="itemDec"><strong><%= itemsAll.item%></strong></span>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+              <span class="dolarColor"><strong>$</strong></span><%= itemsAll.value%>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <span class="dateDec">
+                <%= itemsAll.created.toDateString().split(' ').slice(1).join(' ').toUpperCase() %>
+              </span>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1">
+              <form class="lineOne" action="/all/<%=itemsAll._id%>?_method=DELETE" method="post">
+                <button class="formButtonItem"><i class="fa fa-trash" aria-hidden="true"></i></button>
+              </form>
+            </div>
+          </div>
+          <% }%>
+          <% })%>
+        </div>
+      </div>
+      <div class="col-md-6 borders11">
+        <div class="rightExp">
+          <h5 class="titleH5">Incomes</h5>
+          <% last.forEach(function(itemsAll){%>
+          <% if(itemsAll.expInc==="inc"){%>
+          <div class="oneItem">
+            <div class="col-md-5 col-sm-5 col-xs-5 ">
+              <span class="itemDec"><strong><%= itemsAll.item%></strong></span>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+              <span class="dolarColor"><strong>$</strong></span><%= itemsAll.value%>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <span class="dateDec">
+                <%= itemsAll.created.toDateString().split(' ').slice(1).join(' ').toUpperCase() %>
+              </span>
+            </div>
+            <div class="col-md-1 col-sm-1 col-xs-1">
+              <form class="lineOne" action="/all/<%=itemsAll._id%>?_method=DELETE" method="post">
+                <button class="formButtonItem"><i class="fa fa-trash" aria-hidden="true"></i></button>
+              </form>
+            </div>
+          </div>
+          <% }%>
+          <% })%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer%>

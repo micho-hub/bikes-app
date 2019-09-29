@@ -1,0 +1,14 @@
+<% include ../partials/header%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h1 class="indexH1">New comment form</h1>
+      <form action="/bikes/<%= bikes._id%>/comments" method="POST" >
+          <input class="form-control"type="text" name="comment[text]" placeholder="Comment" >
+        <button class="btn btn-success form-control" >Go</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer%>
